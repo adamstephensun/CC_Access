@@ -47,6 +47,11 @@ ExportedObj/
 *.opendb
 *.VC.db
 
+# Files that are too damn big
+*.mp4
+*.mp3
+*.webm
+
 # Unity3D generated meta files
 *.pidb.meta
 *.pdb.meta

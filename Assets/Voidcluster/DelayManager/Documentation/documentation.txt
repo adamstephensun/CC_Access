@@ -1,0 +1,232 @@
+-> Delay Manager by Voidcluster <-
+
+Welcome to the Delay Manager.
+With the help of this class, you will be able to execute delayed methods easily without the need to set up a Coroutine every time.
+One of the key features of this class is that it accepts any type of method as input.
+You can pass a parameterless method or one that has 1 or even more parameters, it will work anyways.
+Don't forget to also check the Example.cs script, which includes examples and commented code regarding the usage of this asset.
+
+To get started simply drag and drop the DelayManager prefab found under prefabs folder into your scene and you are ready to go.
+The DelayManager object contains the DelayManager script which has a static instance of the class (singleton)
+That means that we can call the DelyManager methods from anywhere.
+
+// How to call a simple delay
+If you want to call a method after some seconds you can use the simple delay method of our manager
+You can call these method from anywhere as long as the DelayManager prefab is present on the scene.
+
+Example:
+DelayManager.instance.Delay(x => FireBullet(), 3.0f);
+
+As you can see here we pass the FireBullet() method and we tell the manager to execute it after 3.0f seconds
+
+Another example:
+DelayManager.instance.Delay(x => SpawnAllies(30), 5.0f);
+
+Here we pass a method with parameters that will be executed after 5 seconds
+
+// How to call a simple repeat
+In case you want to repeat a single method x times you can call the repeat method
+
+Example:
+DelayManager.instance.Repeat(x => FireBullet(), 0.1f, 5);
+
+The first parameter is the method we want to repeat, the second one is the delay between each repeat, and the third integer parameter is the repeat count
+Just like the previous example, you can pass a method with parameters here too
+
+Another example:
+DelayManager.instance.Repeat(x => SpawnAllies(30), 1.0f, 30);
+
+// How to call a method if a condition is met
+
+Imagine that you want a method to fire only when a certain condition is met.
+You can implement this behavior using the condition method
+
+Example:
+DelayManager.instance.Condition(x => SpawnGameOverUI(), () => IsPlayerDefeated());
+
+The first parameter takes the method that we want to fire.
+The second parameter takes a method that should return a boolean which will fire the first method when it returns true.
+
+Let's say that IsPlayerDefeated() checks if the player's health is <= 0.0f and returns true if it is, and that SpawnGameOverUI() simply creates an UI with a game over text.
+
+When can you use this method?
+As an example, you can set it once during Start() and it will constantly check in the background if the IsPlayerDefeated() returns true or not.
+The moment that it does it will fire the SpawnGameOverUI() method once.
+
+Consider this method as some sort of event listener.
+
+// What is a sequence
+If you want to create more complex things you will need a sequence
+A sequence is an object that stores all the information about the methods that you want to delay or repeat and then calls them in the specific order that you've built them.
+
+// Basic sequence
+Example:
+DelayManager.instance.BuildSequence()
+            .InitialDelay(5.0f)
+            .Add(x => ThrowBall(this.transform.forward))
+            .Delay(1.0f)
+            .Add(x => ThrowBall(this.transform.right))
+            .Delay(0.5f)
+            .Add(x => ThrowBall(this.transform.up))
+            .Invoke();
+
+It may seem complex at first but it's really easy.
+So first of all we need to call the BuildSequence() method which creates a new Sequence object and returns it.
+After that, you can add an initial delay if you want to the sequence (optional).
+To start adding methods to the sequence you need to call the Add method and pass the method that you want to include.
+Just like before, you can pass methods with any number of parameters.
+
+After adding a method you need to specify the delay that will be executed before passing to the next method in the sequence.
+If you don't add a delay it will default to 0.0f.
+
+So what will happen after calling Invoke?
+Wait 5 seconds (initial delay)
+Throw a ball forward
+Wait 1 second
+Throw a ball right
+Wait 0.5 seconds
+Throw a ball up
+
+As you can see sequence can be useful if you want different things to happen in a specific order and delays.
+Most people like to use sequences to animate their characters
+
+// Repeat sequence
+If you want to create a sequence that simply repeats itself x times then you can do this by calling the repeat method instead of invoke method.
+
+Example:
+DelayManager.instance.BuildSequence()
+            .Add(x => ThrowBall(this.transform.forward))
+            .Delay(1.0f)
+            .Add(x => ThrowBall(this.transform.right))
+            .Delay(0.5f)
+            .Add(x => ThrowBall(this.transform.up))
+            .Repeat(5, 15.0f)
+
+Same logic as the basic invoke, but instead of running it only once we will repeat this sequence 5 times at an interval rate of 15 seconds.
+
+// Tick sequence
+Let's take for example that you want a method to run forever every X seconds.
+Then calling the tick method instead of invoke or repeat will suit your needs.
+
+Example:
+DelayManager.instance.BuildSequence()
+            .Add(x => ThrowBall(this.transform.forward))
+            .Tick(1.0f)
+
+The input parameter that the tick method takes is the interval rate. In this case, I've set it to 1 second but you can put any number here (float).
+
+// Condition sequence
+Just like the basic condition method but that executes after a condition is met
+
+Example:
+DelayManager.instance.BuildSequence()
+            .Add(x => DestroyAllEnemies())
+            .Delay(1.0f)
+            .Add(x => SetGamePaused(true))
+            .Delay(1.0f)
+            .Add(x => SpawnGameOverUI())
+            .Condition(() => IsPlayerDefeated());
+
+The condition method takes as input a method that returns a bool and fires the entire sequence once this condition returns true.
+
+// Queued sequence
+Let's say that you want multiple sequences to fire at an arbitrary moment.
+You could store the sequences to a List<Sequence> and then fire them off one by one by calling invoke.
+Or you can use the queue method, which does the same thing but behind the scenes.
+
+DelayManager.instance.BuildSequence()
+            .Add(x => SpawnEnemies(5))
+            .Delay(1.0f)
+            .Add(x => SpawnEnemies(30))
+            .Queue();
+
+DelayManager.instance.BuildSequence()
+            .Add(x => SpawnAllies(10))
+            .Delay(1.0f)
+            .Add(x => SpawnAllies(60))
+            .Queue();
+
+Here we set two sequences.
+One will spawn enemies and another one will spawn allies.
+
+Let's say that something happens in your game and you want to call all the stored sequences you have so far.
+
+You can simply do this by calling this method:
+DelayManager.instance.CallAllQueuedSequences(0.0f, true);
+
+The CallAllQueuedSequences method takes two parameters as input.
+The first float parameter is the delay that you want between each sequence call.
+The second boolean parameter is if you want to clear the called sequences or not.
+If you set it to true all the queued sequences will be deleted after.
+Put to false if you want to call again these sequences in the future.
+
+// Tagged queued sequences
+Let's say that you want to queue different methods but only want to call certain sequences that do certain things.
+You can do this by using Tags.
+
+Example:
+DelayManager.instance.BuildSequence()
+            .Add(x => FindEnemyBaseTarget())
+            .Delay(1.0f)
+            .Add(x => LaunchMissileToEnemyBase())
+            .SetTag("Fire")
+            .Queue();
+
+Here we tag this sequence with the Fire string.
+That means that if after we call this method:
+
+DelayManager.instance.CallQueuedSequencesWithTag("Fire", 1.0f, false);
+
+It will call all the stored queued sequences that have a Fire tag on them and fire them in order with a 1.0f (Change it to any value) delay between each call.
+If you want to fire them all together instead of one by one, simply set the delay to 0.0f.
+
+// Other useful ways to call queued sequences
+
+Here you can find other methods that you can call on queued sequences:
+
+DelayManager.instance.CallFirstQueuedSequence();
+DelayManager.instance.CallLastQueuedSequence();
+DelayManager.instance.CallFirstQueuedSequenceWithTag("Fire");
+DelayManager.instance.CallLastQueuedSequenceWithTag("Fire");
+
+These last methods will also return the called sequence in case you need a reference to it.
+
+// Stopping queued sequences
+DelayManager.instance.StopAllQueuedSequences();
+DelayManager.instance.StopAllQueuedSequencesWithTag("Fire");
+
+// How to stop a single non queued sequence
+Let's say for example that you want to interrupt a sequence.
+You can do this easily by storing a reference of the sequence as a variable.
+
+Example:
+Sequence sequence = DelayManager.instance.BuildSequence()
+            .Add(x => ThrowBall(this.transform.forward))
+            .Delay(1.0f)
+            .Add(x => ThrowBall(this.transform.right))
+            .Delay(0.5f)
+            .Add(x => ThrowBall(this.transform.up))
+            .Repeat(5, 15.0f)
+
+Then when you want to stop this repeat sequence simply call this method:
+
+DelayManager.instance.StopRepeat(sequence);
+
+If your sequence is a basic invoke and not a repeat you need to call this:
+
+DelayManager.instance.StopInvoke(sequence);
+
+If your sequence is a condition based sequence you need to call this:
+
+DelayManager.instance.StopCondition(sequence);
+
+If your sequence is a tick sequence you need to call this:
+
+DelayManager.instance.StopTick(sequence);
+
+You can also stop all the ticks by calling this:
+
+DelayManager.instance.ClearTicks();
+
+
+

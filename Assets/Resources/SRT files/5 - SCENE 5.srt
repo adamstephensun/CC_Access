@@ -1,0 +1,367 @@
+﻿1
+00:00:05,640 --> 00:00:07,473
+- Will this one survive?
+
+2
+00:00:10,500 --> 00:00:13,470
+- It's probably too early to tell.
+
+3
+00:00:13,470 --> 00:00:15,648
+- But there is hope.
+
+4
+00:00:15,648 --> 00:00:17,481
+- There's always hope.
+
+5
+00:00:19,140 --> 00:00:21,210
+- This technology has the potential
+
+6
+00:00:21,210 --> 00:00:23,313
+to bring hope to millions.
+
+7
+00:00:24,630 --> 00:00:27,060
+With its power, we can make interventions
+
+8
+00:00:27,060 --> 00:00:29,673
+in ways we previously only dreamt of.
+
+9
+00:00:30,900 --> 00:00:34,350
+Because the process of screening
+and editing our children
+
+10
+00:00:34,350 --> 00:00:36,810
+not only allows us to hunt down reasons
+
+11
+00:00:36,810 --> 00:00:39,303
+that cause a life to end too soon,
+
+12
+00:00:40,470 --> 00:00:44,490
+it can help us to find and
+prevent the genetic diseases
+
+13
+00:00:44,490 --> 00:00:48,243
+and abnormalities that will
+affect their later life.
+
+14
+00:00:49,290 --> 00:00:51,690
+For example, there is a particular gene
+
+15
+00:00:51,690 --> 00:00:55,800
+that if it is carried by the
+parent and passed to the child,
+
+16
+00:00:55,800 --> 00:00:59,100
+that child will have an
+extraordinarily high chance
+
+17
+00:00:59,100 --> 00:01:01,890
+of developing breast cancer.
+
+18
+00:01:01,890 --> 00:01:04,300
+- Very few of us carry those genes
+
+19
+00:01:06,000 --> 00:01:06,840
+- Still.
+
+20
+00:01:06,840 --> 00:01:09,270
+Could you imagine just for a minute,
+
+21
+00:01:09,270 --> 00:01:11,160
+sitting with your child,
+
+22
+00:01:11,160 --> 00:01:13,503
+suffering through
+procedure after procedure
+
+23
+00:01:13,503 --> 00:01:15,300
+with a disease caused
+
+24
+00:01:15,300 --> 00:01:18,990
+by the genetic material you gave to them
+
+25
+00:01:18,990 --> 00:01:22,173
+that you choose to do nothing about?
+
+26
+00:01:26,700 --> 00:01:29,910
+- I would assume, in most of these cases,
+
+27
+00:01:29,910 --> 00:01:33,990
+an intervention could be made
+later in their development.
+
+28
+00:01:33,990 --> 00:01:35,890
+- What do you mean by that?
+
+29
+00:01:36,930 --> 00:01:39,270
+- Well, if I'm right,
+
+30
+00:01:39,270 --> 00:01:41,040
+in this example,
+
+31
+00:01:41,040 --> 00:01:44,703
+we are talking about
+altered versions of BRCA1,
+
+32
+00:01:47,370 --> 00:01:50,853
+although it could be various others.
+
+33
+00:01:52,350 --> 00:01:56,280
+Variants of these genes
+can increase the risk
+
+34
+00:01:56,280 --> 00:01:57,603
+of getting breast cancer,
+
+35
+00:01:58,830 --> 00:02:03,240
+but there are options one can
+take once a child is born.
+
+36
+00:02:03,240 --> 00:02:06,900
+- That may be, but why take the risk?
+
+37
+00:02:06,900 --> 00:02:08,790
+Surely, it's better to
+ensure they cannot happen
+
+38
+00:02:08,790 --> 00:02:10,290
+in the first place.
+
+39
+00:02:10,290 --> 00:02:13,083
+- Well, from a medical perspective,
+
+40
+00:02:14,100 --> 00:02:18,510
+I can certainly see the benefits
+of using genetic editing
+
+41
+00:02:18,510 --> 00:02:21,600
+to eliminate serious congenital diseases
+
+42
+00:02:21,600 --> 00:02:26,580
+or high-risk mutations before
+a foetus reaches full term.
+
+43
+00:02:26,580 --> 00:02:31,580
+But, these conditions that
+we talk of can vary hugely
+
+44
+00:02:32,130 --> 00:02:35,460
+in terms of the effects
+on a person's life,
+
+45
+00:02:35,460 --> 00:02:39,243
+their presentation, and
+severity of symptoms.
+
+46
+00:02:40,740 --> 00:02:44,550
+If we cannot accurately predict the impact
+
+47
+00:02:44,550 --> 00:02:48,540
+of eliminating or changing one's genes,
+
+48
+00:02:48,540 --> 00:02:52,500
+then we could not
+ethically make the decision
+
+49
+00:02:52,500 --> 00:02:54,510
+to make those alterations.
+
+50
+00:02:54,510 --> 00:02:57,030
+- I think we are overcomplicating this.
+
+51
+00:02:57,030 --> 00:02:59,460
+Remember, an intervention of this nature
+
+52
+00:02:59,460 --> 00:03:03,480
+stops the potential of
+something cruel and painful
+
+53
+00:03:03,480 --> 00:03:07,050
+before it even has the
+chance to manifest itself.
+
+54
+00:03:07,050 --> 00:03:08,490
+It will not stop all cancers,
+
+55
+00:03:08,490 --> 00:03:11,910
+but imagine for those
+parents that carry risk
+
+56
+00:03:11,910 --> 00:03:14,340
+how freeing it could be to remove it.
+
+57
+00:03:14,340 --> 00:03:17,100
+- But as I said before, at this stage,
+
+58
+00:03:17,100 --> 00:03:19,200
+parents would be calculating risk
+
+59
+00:03:19,200 --> 00:03:21,870
+and making decisions
+on a percentage chance
+
+60
+00:03:21,870 --> 00:03:26,460
+of something possibly
+happening way in the future.
+
+61
+00:03:26,460 --> 00:03:29,040
+Decisions a child would not have a say in.
+
+62
+00:03:29,040 --> 00:03:31,770
+- In these cases,
+percentage or no percentage,
+
+63
+00:03:31,770 --> 00:03:35,040
+surely the impact of our
+inaction will have more risk
+
+64
+00:03:35,040 --> 00:03:37,113
+than any action we could take.
+
+65
+00:03:39,510 --> 00:03:42,153
+- No one can dispute cancer is.
+
+66
+00:03:43,260 --> 00:03:47,700
+And passing a gene hidden
+in our own genetic code
+
+67
+00:03:47,700 --> 00:03:49,803
+that poses them risk is.
+
+68
+00:03:52,980 --> 00:03:56,670
+It feels natural to try and protect one
+
+69
+00:03:56,670 --> 00:04:00,240
+from such illnesses we could pass on them.
+
+70
+00:04:00,240 --> 00:04:03,750
+But to talk about making a change now
+
+71
+00:04:03,750 --> 00:04:05,550
+to potentially save their life
+
+72
+00:04:05,550 --> 00:04:10,550
+in five, 10, 50, 80
+years from now is just...
+
+73
+00:04:11,910 --> 00:04:14,520
+- I'd say it comes down to
+
+74
+00:04:14,520 --> 00:04:17,280
+if you feel you should
+make these decisions
+
+75
+00:04:17,280 --> 00:04:21,540
+not fully knowing what
+the consequences would be,
+
+76
+00:04:21,540 --> 00:04:23,100
+or you wait
+
+77
+00:04:23,100 --> 00:04:25,444
+to make an intervention.
+- When it could be too late.
+
+78
+00:04:25,444 --> 00:04:27,611
+When it could be too late.
+
+79
+00:04:29,730 --> 00:04:33,153
+- When the level of risk
+could be better understood.
+
+80
+00:04:37,020 --> 00:04:39,570
+- Would you want to remove genes
+
+81
+00:04:39,570 --> 00:04:44,223
+from your child that might
+pose them a risk in the future,
+
+82
+00:04:45,390 --> 00:04:48,090
+or would you prefer to give them some role
+
+83
+00:04:48,090 --> 00:04:50,170
+in this decision later in life
+
+84
+00:04:51,930 --> 00:04:53,553
+if that was possible?
+
